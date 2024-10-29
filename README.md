@@ -1,4 +1,4 @@
-# Applant Demo
+# applant_demo
 
 A new Flutter project.
 
