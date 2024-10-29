@@ -57,6 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: InputDecoration(
                 labelText: 'Email',
                 labelStyle: TextStyle(color: Colors.white),
+                floatingLabelBehavior:
+                    FloatingLabelBehavior.always, // Keep label positioned above
                 filled: true,
                 fillColor: Colors.white,
                 border: OutlineInputBorder(
@@ -71,6 +73,8 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: InputDecoration(
                 labelText: 'Password',
                 labelStyle: TextStyle(color: Colors.white),
+                floatingLabelBehavior:
+                    FloatingLabelBehavior.always, // Keep label positioned above
                 filled: true,
                 fillColor: Colors.white,
                 border: OutlineInputBorder(
