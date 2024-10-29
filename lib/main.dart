@@ -93,6 +93,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+            Padding(
+              padding: EdgeInsets.only(top: 8.0),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                  ),
+                  onPressed: () {
+                    setState(() {});
+                  },
+                  child: Text(
+                    "Giriş Yap",
+                    style: TextStyle(color: Colors.green),
+                  )),
+            )
           ],
         ),
       ),
