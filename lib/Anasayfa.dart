@@ -46,7 +46,7 @@ class _AnasayfaState extends State<Anasayfa> {
         child: GridView.builder(
             itemCount: uygulamalar.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 1, childAspectRatio: 1 / 1),
+                crossAxisCount: 1, childAspectRatio: 2 / 1),
             itemBuilder: (context, index) {
               return Card(
                 child: Padding(
