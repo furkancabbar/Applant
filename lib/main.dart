@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors
 
 import 'package:applant_demo/Anasayfa.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Applant',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        scaffoldBackgroundColor:
-            Colors.green, // Setting background color to green
+        scaffoldBackgroundColor: Colors.green,
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Applant'),
@@ -43,9 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green, // App bar color
-        title: Text(widget.title,
-            style: TextStyle(color: Colors.white)), // White text
+        backgroundColor: Colors.green,
+        title: Text(
+          widget.title,
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -53,13 +54,21 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            Spacer(), // Üst boşluk
+            Align(
+              alignment: Alignment.center,
+              child: Image.asset(
+                "img/applant.jpeg",
+                height: 150, // İstenilen yükseklik
+              ),
+            ),
+            Spacer(flex: 1), // Görsel ile form alanları arasındaki boşluk
             TextField(
               controller: _emailController,
               decoration: InputDecoration(
                 labelText: 'Email',
                 labelStyle: TextStyle(color: Colors.white),
-                floatingLabelBehavior:
-                    FloatingLabelBehavior.always, // Keep label positioned above
+                floatingLabelBehavior: FloatingLabelBehavior.always,
                 filled: true,
                 fillColor: Colors.white,
                 border: OutlineInputBorder(
@@ -74,8 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: InputDecoration(
                 labelText: 'Password',
                 labelStyle: TextStyle(color: Colors.white),
-                floatingLabelBehavior:
-                    FloatingLabelBehavior.always, // Keep label positioned above
+                floatingLabelBehavior: FloatingLabelBehavior.always,
                 filled: true,
                 fillColor: Colors.white,
                 border: OutlineInputBorder(
@@ -94,23 +102,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 8.0),
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Anasayfa()));
-                    });
-                  },
-                  child: Text(
-                    "Giriş Yap",
-                    style: TextStyle(color: Colors.green),
-                  )),
-            )
+            SizedBox(height: 20), // Parola alanı ile buton arasındaki boşluk
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Anasayfa()),
+                );
+              },
+              child: Text(
+                "Giriş Yap",
+                style: TextStyle(color: Colors.green),
+              ),
+            ),
+            Spacer(), // Alt boşluk
           ],
         ),
       ),
