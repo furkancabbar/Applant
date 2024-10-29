@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:applant_demo/Anasayfa.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -100,7 +101,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     backgroundColor: Colors.white,
                   ),
                   onPressed: () {
-                    setState(() {});
+                    setState(() {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Anasayfa()));
+                    });
                   },
                   child: Text(
                     "Giriş Yap",
